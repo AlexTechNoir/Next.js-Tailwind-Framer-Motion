@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+
+/* place your dynamic global styles here */
+.text-gradient {
+  background: #121FCF;
+  background: linear-gradient(to top, #121FCF 0%, #E900FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link-underscore-gradient {
+  background: linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 200ms;
+  &:hover {
+    background-size: 100% 3px;
+  }
+}
+
+.custom {
+  &:nth-of-type(1) {
+    top: -45%;
+  }
+  &:nth-of-type(2) {
+    top: -95%;
+  }
+  &:nth-of-type(3) {
+    top: -45%;
+  }
+  &:nth-of-type(4) {
+    top: -75%;
+  }
+}
+
+.zoomedImages {
+  &:nth-of-type(2) {
+    .imageContainer {
+      top: -30vh;
+      left: 5vw;
+      width: 35vw;
+      height: 30vh;
+    }
+  }
+  &:nth-of-type(3) {
+    .imageContainer {
+      top: -10vh;
+      left: -25vw;
+      width: 20vw;
+      height: 45vh;
+    }
+  }
+  &:nth-of-type(4) {
+    .imageContainer {
+      left: 27.5vw;
+      width: 25vw;
+      height: 25vh;
+    }
+  }
+  &:nth-of-type(5) {
+    .imageContainer {
+      top: 27.5vh;
+      left: 5vw;
+      width: 20vw;
+      height: 25vh;
+    }
+  }
+  &:nth-of-type(6) {
+    .imageContainer {
+      top: 27.5vh;
+      left: -22.5vw;
+      width: 30vw;
+      height: 25vh;
+    }
+  }
+  &:nth-of-type(7) {
+    .imageContainer {
+      top: 22.5vh;
+      left: 25vw;
+      width: 15vw;
+      height: 15vh;
+    }
+  }
+}
+
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border
+  }
+  html, body {
+    @apply p-0 m-0 font-sans h-full 
+  }
+  body {
+    /* this needs to be set for Parallax section worked correctly - overflow-x-hidden on other containers that are inside body prevents position: sticky on their children */
+    /* oveflow-x - hidden is used to not to have scroll bars with horizontal scroll of companies */
+    @apply overflow-x-hidden
+  }
+  #__next {
+    @apply h-full 
+  }
+}
