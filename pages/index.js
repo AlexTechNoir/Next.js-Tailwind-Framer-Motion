@@ -7,8 +7,6 @@ import Gallery from '../components/Gallery'
 import Parallax from '../components/Parallax'
 import ZoomParallax from '../components/ZoomParallax'
 import TiltParallax from '../components/TiltParallax'
-import Shapes3D from '../components/Shapes3D'
-import DistortedGlass from '../components/DistortedGlass'
 import BrokenGlass from '../components/BrokenGlass'
 import ScrollLines from '../components/ScrollLines'
 import ScrollSVGText from '../components/ScrollSVGText'
@@ -25,7 +23,7 @@ export default function Home() {
       <main
         className="
           row-start-2 row-end-3 col-start-1 col-end-2
-          grid grid-rows-[repeat(11, auto)] grid-cols-[1fr_512px_512px_1fr]
+          grid grid-rows-[repeat(9, auto)] grid-cols-[1fr_512px_512px_1fr]
           w-screen pt-[1rem] relative
           max-[1024px]:grid-cols-[1fr_50vw_50vw_1fr]
         "
@@ -37,8 +35,6 @@ export default function Home() {
         <Parallax />
         <ZoomParallax />
         <TiltParallax />
-        <Shapes3D />
-        <DistortedGlass />
         <BrokenGlass />
         <ScrollLines />
         <ScrollSVGText />

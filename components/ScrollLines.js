@@ -24,7 +24,7 @@ export default function ScrollLines() {
   })
 
   return (
-    <section className="row-start-10 row-end-11 col-start-1 col-end-5">
+    <section className="row-start-8 row-end-9 col-start-1 col-end-5">
       <div className="h-[100vh]"></div>
       <div ref={container}>
         <Slider src='/scroll-lines/1.jpg' left="-55%" progress={scrollYProgress} direction="left" />

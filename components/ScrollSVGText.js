@@ -31,7 +31,7 @@ export default function ScrollSVGText() {
   },[])
 
   return (
-    <section className="row-start-11 row-end-12 col-start-1 col-end-5 pb-40" ref={container}>
+    <section className="row-start-9 row-end-10 col-start-1 col-end-5 pb-40" ref={container}>
       <svg viewBox="0 0 250 90">
         <path id="curve" fill="none" d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68" />
         <text className="text-[6px] uppercase">

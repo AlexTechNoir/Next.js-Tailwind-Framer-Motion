@@ -7,7 +7,7 @@ const Scene = dynamic(() => import('../components/brokenGlass/Scene'), {
 
 export default function BrokenGlass() {
   return (
-    <div className="row-start-9 row-end-10 col-start-1 col-end-5 relative h-screen bg-black">
+    <div className="row-start-7 row-end-8 col-start-1 col-end-5 relative h-screen bg-black">
       <Scene />
     </div>
   )
