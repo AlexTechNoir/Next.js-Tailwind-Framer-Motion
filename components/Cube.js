@@ -4,15 +4,24 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { OrbitControls } from '@react-three/drei'
 import { useMotionValue, useSpring } from 'framer-motion'
 import { motion } from 'framer-motion-3d'
+import { useAtom } from 'jotai'
+import { cubeRefAtom } from '../store'
 
 export default function Cube() {
+
+  const cubeRef = useRef(null)
+
+  const [ , setCubeRef ] = useAtom(cubeRefAtom)
+
+  setCubeRef(cubeRef.current)
+
   return (
     <div className="
       row-start-1 row-end-2 col-start-3 col-end-4 justify-self-end
       w-[400px] h-[400px] z-[0]
       max-[1023px]:hidden
     ">
-      <Canvas>
+      <Canvas ref={cubeRef}>
         <OrbitControls pages={5} enablePan={false} enableZoom={false} />
         <ambientLight intensity={2} />
         <directionalLight position={[2, 1, 1]} />

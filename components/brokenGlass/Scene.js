@@ -1,10 +1,19 @@
-import React from 'react'
+import { useRef } from 'react'
 import { Canvas, useThree } from '@react-three/fiber'
 import { Environment, useGLTF, Text, Float, MeshTransmissionMaterial } from '@react-three/drei'
+import { useAtom } from 'jotai'
+import { brokenGlassRefAtom } from '../../store'
 
 export default function Scene() {
+
+  const brokenGlassRef = useRef(null)
+
+  const [ , setBrokenGlassRef ] = useAtom(brokenGlassRefAtom)
+
+  setBrokenGlassRef(brokenGlassRef.current)
+
   return (
-    <Canvas orthographic camera={{ position: [0, 0, 1], zoom: 800 }}>
+    <Canvas ref={brokenGlassRef} orthographic camera={{ position: [0, 0, 1], zoom: 800 }}>
       <Model />
       <directionalLight intensity={3} position={[0, 0.1, 1]} />
       <Environment preset="city"/>
