@@ -1,7 +1,7 @@
 import { Rubik } from 'next/font/google'
 import { useState, useEffect } from 'react'
 import { useAtom } from 'jotai'
-import { cubeRefAtom, brokenGlassRefAtom } from '../store'
+import { cubeRefAtom } from '../store'
 
 import Header from './layout/Header'
 import Footer from './layout/Footer'
@@ -11,15 +11,14 @@ const rubik = Rubik({ subsets: ['latin'] })
 export default function Layout({ children }) {
 
   const [ cubeRef ] = useAtom(cubeRefAtom)
-  const [ brokenGlassRef ] = useAtom(brokenGlassRefAtom)
 
   const [ isLoaded, setIsLoaded ] = useState(false)
 
   useEffect(() => {
-    if (cubeRef && brokenGlassRef) {
+    if (cubeRef) {
       setIsLoaded(true)
     }
-  },[ cubeRef, brokenGlassRef ])
+  },[ cubeRef ])
 
   return (
     <>

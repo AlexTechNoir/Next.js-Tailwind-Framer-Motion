@@ -7,7 +7,6 @@ import Gallery from '../components/Gallery'
 import Parallax from '../components/Parallax'
 import ZoomParallax from '../components/ZoomParallax'
 import TiltParallax from '../components/TiltParallax'
-import BrokenGlass from '../components/BrokenGlass'
 import ScrollLines from '../components/ScrollLines'
 import ScrollSVGText from '../components/ScrollSVGText'
 
@@ -35,7 +34,6 @@ export default function Home() {
         <Parallax />
         <ZoomParallax />
         <TiltParallax />
-        <BrokenGlass />
         <ScrollLines />
         <ScrollSVGText />
       </main>
